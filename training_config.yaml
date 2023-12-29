@@ -1,0 +1,17 @@
+lora_r: 1
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target_modules: ["c_attn", "c_proj"]
+modules_to_save: ["wpe"]
+micro_batch_size: 4
+gradient_accumulation_steps: 1
+learning_rate: 0.001
+train_steps: 100
+warmup_steps: 40
+max_ctx_len: 4096
+output_dir: "experiments_wiki_4096_4bit"
+logging_steps: 1
+eval_steps: 25
+save_steps: 50
+save_total_limit: 8
+dataset_filepath: "./long_text_wiki.prk"
